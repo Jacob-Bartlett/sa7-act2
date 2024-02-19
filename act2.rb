@@ -138,13 +138,13 @@ print length_words
 # Question 15
 puts "\n\nThis is Q15"
 
-def safe_divide(num1, num2)
+def divide_numbers(num1, num2)
     begin 
         result = num1 / num2
-    rescue => e
-        puts "Error: #{e.message}"
+    rescue ZeroDivisionError
+        puts "Cannot divide by zero!"
     end
 end
 
-puts safe_divide(10, 2)
-puts safe_divide(5, 0)
+puts divide_numbers(10, 2)
+puts divide_numbers(5, 0)
